@@ -8,19 +8,43 @@
 </head>
 <body>
     <h1>Snake Game 🐍</h1>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <div id="score">Score: 0</div>
-<div id="controls">
-    <button id="pauseBtn">Pause</button>
-    <button id="restartBtn">Restart</button>
-    <button id="endGameBtn">End Game</button>
-</div>
-<div id="levelMenu">
-    <h2>Choose Level</h2>
-    <button onclick="startGame('easy')">Easy</button>
-    <button onclick="startGame('medium')">Medium</button>
-    <button onclick="startGame('hard')">Hard</button>
-</div>
+
+    <div id="mainContainer" style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; margin-top: 20px;">
+        <div id="gameSection" style="display: flex; flex-direction: column; align-items: center;">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="score">Score: 0</div>
+            <div id="controls">
+                <button id="pauseBtn">Pause</button>
+                <button id="restartBtn">Restart</button>
+                <button id="endGameBtn">End Game</button>
+            </div>
+            <div id="levelMenu">
+                <h2>Choose Level</h2>
+                <button onclick="startGame('easy')">Easy</button>
+                <button onclick="startGame('medium')">Medium</button>
+                <button onclick="startGame('hard')">Hard</button>
+            </div>
+            <div id="dpad" style="margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="row">
+                    <button id="upBtn">⬆️</button>
+                </div>
+                <div class="row" style="display: flex; gap: 10px;">
+                    <button id="leftBtn">⬅️</button>
+                    <button id="downBtn">⬇️</button>
+                    <button id="rightBtn">➡️</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="instructions" style="background-color: #222; border: 2px solid #00ff00; border-radius: 10px; padding: 20px; color: #00ff00; font-family: 'Poppins', sans-serif; max-width: 250px;">
+            <h3 style="text-align: center;">Instructions 🎯</h3>
+            <p>➡️ Use Arrow Keys or D-Pad Buttons to move the snake.</p>
+            <p>🍎 Eat the food to grow and score points.</p>
+            <p>🚫 Don't collide with yourself!</p>
+            <p>🎵 Press any key to start background music.</p>
+                  </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
