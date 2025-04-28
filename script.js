@@ -1,6 +1,6 @@
 // Sounds
-const bgMusic = new Audio('background.mp3');
-const eatSound = new Audio('eat.mp3');
+const bgMusic = new Audio('Sounds/background.mp3');
+const eatSound = new Audio('Sounds/eat.mp3');
 const restartBtn = document.getElementById('restartBtn');
 const pauseBtn = document.getElementById('pauseBtn'); // Added pause button
 
@@ -185,6 +185,20 @@ document.addEventListener('keydown', function (event) {
     else if (event.keyCode === 39 && direction !== 'LEFT') direction = 'RIGHT';
     else if (event.keyCode === 40 && direction !== 'UP') direction = 'DOWN';
 });
+// On-screen button controls
+document.getElementById('leftBtn').addEventListener('click', () => {
+    if (direction !== 'RIGHT') direction = 'LEFT';
+});
+document.getElementById('upBtn').addEventListener('click', () => {
+    if (direction !== 'DOWN') direction = 'UP';
+});
+document.getElementById('downBtn').addEventListener('click', () => {
+    if (direction !== 'UP') direction = 'DOWN';
+});
+document.getElementById('rightBtn').addEventListener('click', () => {
+    if (direction !== 'LEFT') direction = 'RIGHT';
+});
+
 const endGameBtn = document.getElementById('endGameBtn');
 
 endGameBtn.addEventListener('click', () => {
