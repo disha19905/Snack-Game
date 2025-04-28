@@ -1,6 +1,6 @@
 // Sounds
-const bgMusic = new Audio('Sounds/background.mp3');
-const eatSound = new Audio('Sounds/eat.mp3');
+const bgMusic = new Audio('background.mp3');
+const eatSound = new Audio('eat.mp3');
 const restartBtn = document.getElementById('restartBtn');
 const pauseBtn = document.getElementById('pauseBtn'); // Added pause button
 
